@@ -4,6 +4,7 @@
 The files in this repository were used to configure the network depicted below.
 
 Project1.png
+https://github.com/ozk649/UPENN-ELKSTACK-PROJECT/blob/f71233e2b248459e0c2bb7a4f38d19eaf9d070c1/Project1.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
