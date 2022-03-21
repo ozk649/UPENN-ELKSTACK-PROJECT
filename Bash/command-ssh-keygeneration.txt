@@ -1,0 +1,19 @@
+#ssh key generation
+ssh-keygen
+
+#Edit Ansible hosts file (/etc/ansible)
+nano hosts 
+
+#Run Ansible playbook file
+ansible-playbook [file name]
+
+#Check for docker containers running
+docker ps
+#or
+docker container list -a
+
+#Running an Ansible container for the first time
+docker start -ti run cyberxsecurity/ansible:latest bash
+
+#Running ANsible container once it has been set up
+docker container start [comntainer's dynamically assigned name]
