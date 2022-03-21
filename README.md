@@ -26,22 +26,25 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+- A Jumpbox acts as a gateway to the network, providing a single point of entry to the network which reduces the attack surface and also provides for better manageability for the deployment of various system components.
+- A Load balancer helps distribute service load across the system to provide high availability. It also provides a single point of entry to the network for users accessing a service running on the system.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
+- Filebeat is an agent that collects system events such as logins (events, locationsc, etc)  and sends it the ELK stack as an output for monitoring and reporting purposes.
+- Metricbeat is an agent that collects metrics and statistics from the operating system and services running on the server and sends the data to the ELK stack as an output.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+
+| Name         | Function                                            | IP Address | Operating System |
+|----------    |-----------------------------------------------------|------------|------------------|
+| Jump Box     | Gateway                                             | 10.1.0.4   | Linux            |
+| ELK Stack    | Kibana/Filebeat/Metricbeat                          | 10.2.0.4   | Linux            |
+| LoadBalancer | User service access gateway/high availability tool  | 10.1.0.x   |                  |
+| Web 1        | Webserver host                                      | 10.1.0.12  |                  |
+| Web 2        | Webserver host                                      | 10.1.0.13  |                  |
+| Web 3        | Redundant webserver host                            | 10.1.0.14  |                  |
 
 ### Access Policies
 
