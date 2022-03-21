@@ -103,7 +103,7 @@ SSH into the control node and follow the steps below:
 
     ![image](https://user-images.githubusercontent.com/44678341/159197539-70064e61-a55a-412c-87f5-17a205426429.png)
 
-- http://[loadbalancerIP:5601]/app/kibana can be used in order to check that the ELK server is running?
+- http://[loadbalancerIP:5601]/app/kibana can be used in order to check that the ELK server is running
 
 - Specific Commands:
         - To create a playbook file: touch [playbook file name].yml
